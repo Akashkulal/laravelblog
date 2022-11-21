@@ -25,3 +25,34 @@ div.dataTables_wrapper div.dataTables_length select {
     border-right: 1px solid !;
     padding: 8px 18px !important;
 }
+
+.card-shadow{
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    border-radius: 5px;
+}
+
+.category-heading{
+    padding: 10px 12px;
+    border-left: 6px solid #000;
+    background-color: #ddd;
+}
+
+.post-heading{
+    font-size: 26px;
+    color: #000;
+}
+
+.table-pagination svg {
+    width: 15px;
+  }
+  .table-pagination nav {
+  margin-top: 9px;
+  }
+
+  .table-pagination p {
+    margin-top: 15px;
+  }
+
+  .table-pagination nav div:first-child {
+    display: none;
+  }
