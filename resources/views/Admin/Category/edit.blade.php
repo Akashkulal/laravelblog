@@ -5,10 +5,12 @@
 @section('content')
 
 <div class="container-fluid px-4">
-       
+
     <div class="card mt-4">
         <div class="card-header">
-            <h4 class="">Edit Category</h4>
+            <h4 class="">Edit Category
+                <a href="{{url('admin/category')}}" class="btn btn-danger float-end">Back</a>
+            </h4>
         </div>
         <div class="card-body">
             @if ($errors->any())
@@ -31,7 +33,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Description</label>
-                    <textarea name="description" class="form-control">{{$category->description}}</textarea>
+                    <textarea name="description" id="Mysummernote" class="form-control">{!!$category->description!!}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Image</label>
@@ -44,22 +46,22 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Meta Description</label>
-                    <textarea  name="meta_description" rows="3" class="form-control">{{$category->meta_description}}</textarea>
+                    <textarea  name="meta_description" rows="3" class="form-control">{!!$category->meta_description!!}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Meta Keyword</label>
-                    <textarea  name="meta_keyword" rows="3" class="form-control">{{$category->meta_keyword}}</textarea>
+                    <textarea  name="meta_keyword" rows="3" class="form-control">{!!$category->meta_keyword!!}</textarea>
                 </div>
 
                 <h6>Status Mode</h6>
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <label for="">Navbar Status</label>
-                        <input type="checkbox" name="navbar_status"{{$category->navbar_status=='1'?'checked':''}}>
+                        <input type="checkbox" name="navbar_status"{{$category->navbar_status== '1' ? 'checked':''}}>
                     </div>
                     <div class="col-md-3 mb-3">
                         <label for=""> Status</label>
-                        <input type="checkbox" name="status"{{$category->status=='1'?'checked':''}}>
+                        <input type="checkbox" name="status"{{$category->status== '1' ? 'checked':''}}>
                     </div>
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-primary float-end">Update Category</button>

@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container-fluid px-4">
-       
+
     <div class="card mt-4">
         <div class="card-header">
             <h4 class="">Add Category</h4>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Description</label>
-                    <textarea name="description" class="form-control"></textarea>
+                    <textarea name="description" id="Mysummernote" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Image</label>

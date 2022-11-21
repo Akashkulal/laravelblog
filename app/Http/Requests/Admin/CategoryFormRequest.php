@@ -31,19 +31,18 @@ class CategoryFormRequest extends FormRequest
             'slug'=>[
                 'required',
                 'string',
-                
+
             ],
             'description'=>[
                 'required'
             ],
             'images'=>[
-                'required',
                 'mimes:jpeg,jpg,png'
             ],
             'meta_title'=>[
                 'required',
                 'string',
-                
+
             ],
             'meta_description'=>[
                 'required',
@@ -55,11 +54,11 @@ class CategoryFormRequest extends FormRequest
             ],
             'navbar_status'=>[
                 'nullable'
-                
+
             ],
             'status'=>[
                 'nullable'
-                
+
             ],
 
         ];
@@ -67,3 +66,8 @@ class CategoryFormRequest extends FormRequest
         return $rules;
     }
 }
+
+
+
+
+

@@ -7,7 +7,7 @@
 <div class="container-fluid px-4">
     <div class="card mt-4">
         <div class="card-header">
-            <h4>View Category 
+            <h4>View Category
                 <a href="{{url('admin/add-category')}}" class="btn btn-primary btn-sm float-end">Add Category</a>
             </h4>
         </div>
@@ -16,7 +16,7 @@
                 <div class="alert alert-success">{{(session('message'))}}</div>
             @endif
 
-            <table class="table table-bordered">
+            <table id="myDataTable" class="table table-bordered">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -33,9 +33,9 @@
                         <td>{{$item->id}}</td>
                         <td>{{$item->name}}</td>
                         <td>
-                            <img src="{{asset('uploads/category/'.$item->images)}}" width="50px" height="50px" alt="Img">
+                            <img src="{{asset('uploads/category/'.$item->images)}}" width="50px" height="50px" alt="Img" class="rounded-circle">
                         </td>
-                        <td>{{$item->status=='1'?'Hidden':'Shown'}}</td>
+                        <td>{{$item->status=='1' ? 'Hidden':'Shown'}}</td>
                         <td>
                             <a href="{{url('admin/edit-category/'.$item->id)}}"class="btn btn-success">Edit</a>
                         </td>
@@ -48,7 +48,7 @@
             </table>
         </div>
     </div>
-    
+
     </div>
 
 @endsection

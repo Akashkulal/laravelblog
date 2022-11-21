@@ -44,7 +44,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Description</label>
-                    <textarea name="description" rows="4" class="form-control">{!!$post->description!!}</textarea>
+                    <textarea name="description" id="Mysummernote" rows="4" class="form-control">{!!$post->description!!}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Youtube Iframe Link</label>

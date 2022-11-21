@@ -1,0 +1,27 @@
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+div.dataTables_wrapper div.dataTables_length select {
+    /* width: auto; */
+    width: 50% !important;
+}
+
+/*custom CSS */
+
+/* frontend css */
+
+.bg-green
+{
+    background-color: #04aa6d !important;
+}
+
+.navbar{
+    padding: 0px 0px;
+}
+.navbar .nav-link{
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-right: 1px solid !;
+    padding: 8px 18px !important;
+}
