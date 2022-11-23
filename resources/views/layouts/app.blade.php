@@ -7,7 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('meta_description')">
+    <meta name="keyword" content="@yield('meta_keyword')">
+    <meta name="author" content="Isarva Technology">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -16,6 +19,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+
+    <!-- owl Carousel CSS -->
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -77,12 +84,42 @@
             </div>
         </nav>--}}
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
+
+        @include('layouts.inc.frontend-footer')
     </div>
     <!--Scripts-->
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/jquery-3.6.0.min.js')}}"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+
+    <script>
+        $('.category-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            dots:false,
+            responsive:{
+                0:{
+                    items:1
+
+                },
+                600:{
+                    items:3
+
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
 </body>
 </html>
