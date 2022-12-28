@@ -56,20 +56,12 @@
 
 
     <!-- Summernote JS link -->
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    {{--<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>--}}
+    <script src="{{asset('assets/js/summernote-lite.min.js')}}"></script>
+    <script src="{{asset('assets/js/custom.min.js')}}"></script>
 
     <script>
-        $(document).ready(function() {
-            $("#Mysummernote").summernote({
-                height: 150,
-            });
-            $('.dropdown-toggle').dropdown();
-        });
 
-        //Datatables js
-        $(document).ready( function () {
-            $('#myDataTable').DataTable();
-        } );
     </script>
 </body>
 </html>
