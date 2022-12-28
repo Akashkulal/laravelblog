@@ -105,7 +105,7 @@ class CategoryController extends Controller
             return redirect('admin/category')->with('message','Category deleted Successfully');
         }
         else{
-            return redirect('admin/category')->with('message','No Category Id Found');
+            return redirect('admin/category')->with('message','No Category Id Found in it');
         }
     }
 }
